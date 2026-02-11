@@ -1,6 +1,7 @@
 ### Machine Learning HW 1
 ### Conents Within This Folder Include:
-##Comparative analysis of MLP, CNN, and Vision Transformer architectures across tabular, natural image, and medical image datasets.
+Comparative analysis of MLP, CNN, and Vision Transformer architectures across tabular, natural image, and medical image datasets.
+To run everything, you can simply run one file called ML_HW.ipynb and there you can view all the outputs or you can go through the steps below. 
 
 ## Quick Start
 ```bash
