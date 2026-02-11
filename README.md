@@ -20,7 +20,7 @@ python pcam_main.py --model cnn --epochs 11         # Medical images
 
 ## Architectures
 
-### MLP and CNN
+### MLP 
 ```
 ### MLP
 **Best for:** Tabular data | **Params:** 42K-2.8M depending on input size
