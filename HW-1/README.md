@@ -2,6 +2,7 @@
 # Deep Learning Architecture Comparison
 
 Comparative analysis of MLP, CNN, and Vision Transformer architectures across tabular, natural image, and medical image datasets.
+
 Note: ML_HW.ipynb compiles data, training, and eval and can output all information needed - I ran my tests there. In the folders of HW-1, the files seperate the different implementation used for each datasets for clarity. 
 
 ## Quick Start
