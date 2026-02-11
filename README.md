@@ -39,7 +39,7 @@ Comparative analysis of MLP, CNN, and Vision Transformer architectures across ta
 ## Output Structure
 
 After running experiments, results are saved to:
-```
+
 HW-1/
 │
 ├── configs/
