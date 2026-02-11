@@ -17,3 +17,14 @@ Compare and evaluate three neural network architectures (MLP, CNN, and Vision Tr
 
 ### Architecture Overview
 The codebase follows a modular design pattern separating concerns for maintainability and reusability:
+
+### Outcomes and Interpretation
+
+Dataset	Architecture	Accuracy	F1	Notes
+0	Adult	MLP	0.859	0.6880	
+1	Adult	CNN	0.856	0.6760	
+2	CIFAR-100	MLP	0.217	0.2150	
+3	CIFAR-100	CNN	0.384	0.3870	
+4	PCAM	MLP	0.499	0.0000	
+5	PCAM	CNN	0.942	0.9097	
+
