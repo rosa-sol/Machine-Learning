@@ -24,11 +24,11 @@ python pcam_main.py --model cnn --epochs 11         # Medical images
 ```
 ### MLP
 **Best for:** Tabular data | **Params:** 42K-2.8M depending on input size
-
+```
 ### CNN
 ```
 **Best for:** Image data | **Params:** 485K-612K
-
+```
 ### Vision Transformer (Bonus)
 
 # Deep Learning Architecture Comparison
