@@ -37,7 +37,7 @@ Comparative analysis of MLP, CNN, and Vision Transformer architectures across ta
 
 ## Project Structure
 ```
-project/
+HW-1/
 │
 ├── configs/
 │   ├── adult_config.py          # Hyperparameters for UCI Adult dataset
