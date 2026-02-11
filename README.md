@@ -37,38 +37,40 @@ Comparative analysis of MLP, CNN, and Vision Transformer architectures across ta
 
 ## Project Structure
 ```
+## Output Structure
+
+After running experiments, results are saved to:
+```
 HW-1/
 │
 ├── configs/
-│   ├── adult_config.py          # Hyperparameters for UCI Adult dataset
-│   ├── cifar10_config.py        # Hyperparameters for CIFAR-10 dataset
-│   └── pcam_config.py           # Hyperparameters for PatchCamelyon dataset
+│   ├── adult_config.py
+|   |__ CIFAR-100.py
+│   └── pcam_config.py
 │
 ├── datasets/
-│   ├── adult_dataset.py         # Adult Income data loading & preprocessing
-│   ├── cifar10_dataset.py       # CIFAR-10 data loading & augmentation
-│   └── pcam_dataset.py          # PatchCamelyon data loading
+│   ├── adult_dataset.py
+|   |__ CIFAR-100_dataset.py
+│   └── pcam_dataset.py
 │
 ├── models/
-│   ├── mlp.py                   # Multilayer Perceptron implementation
-│   ├── cnn.py                   # Convolutional Neural Network implementation
-│   └── vit.py                   # Vision Transformer implementation (bonus)
+│   ├── adult_model.py
+|   |__ CIFAR-100_model.py
+│   └── pcam_model.py
 │
-├── train/
-│   └── trainer.py               # Training loop with early stopping
+├── training/
+│   └── trainer.py
 │
 ├── eval/
-│   └── evaluator.py             # Evaluation metrics & testing
+│   └── evaluator.py
 │
-├── utils/
-│   ├── plot_curves.py           # Visualization utilities
-│   └── timer.py                 # Training time tracking
+├── Curves/
+│   ├── plot_curves.py
+│   └── timer.py
 │
-├── adult_main.py                # Main script for Adult Income experiments
-├── cifar10_main.py              # Main script for CIFAR-10 experiments
-├── pcam_main.py                 # Main script for PatchCamelyon experiments
-├── requirements.txt             # Python dependencies
-└── README.md                    # This file
+├── adult_main.py
+|___ CIFAR-100_main.py
+└── pcam_main.py
 ```
 
 ## Installation
@@ -126,7 +128,7 @@ datasets/data/adult/
 - StandardScaler normalization for 6 numerical features
 - Train/Val/Test split: 70%/15%/15%
 
-### Dataset B: CIFAR-10
+### Dataset B: CIFAR-100
 
 **Download & Prepare:**
 ```bash
@@ -134,7 +136,7 @@ datasets/data/adult/
 python cifar10_main.py --download
 
 # Data will be saved to:
-datasets/data/cifar10/
+datasets/data/cifar100/
 ```
 **Data Location:**
 ```
@@ -176,11 +178,11 @@ python adult_main.py --model mlp --epochs 11
 # UCI Adult Income - CNN
 python adult_main.py --model cnn --epochs 11
 
-# CIFAR-10 - CNN
-python cifar10_main.py --model cnn --epochs 11
+# CIFAR-100 - CNN
+python cifar100_main.py --model cnn --epochs 11
 
-# CIFAR-10 - Vision Transformer (bonus)
-python cifar10_main.py --model vit --epochs 11
+# CIFAR-100 - Vision Transformer (bonus)
+python cifar100_main.py --model vit --epochs 11
 
 # PatchCamelyon - CNN
 python pcam_main.py --model cnn --epochs 11
@@ -205,7 +207,7 @@ Each dataset has a configuration file in `configs/` defining hyperparameters:
 config = {
     'learning_rate': 0.001,
     'batch_size': 128,
-    'epochs': 50,
+    'epochs': 11,
     'weight_decay': 1e-4,
     'dropout': 0.3,
     'early_stopping_patience': 7,
@@ -214,42 +216,8 @@ config = {
 }
 ```
 
-Modify these files to experiment with different hyperparameters.
 
-## Output Structure
 
-After running experiments, results are saved to:
-```
-project/
-│
-├── configs/
-│   ├── adult_config.py
-|   |__ CIFAR-100.py
-│   └── pcam_config.py
-│
-├── datasets/
-│   ├── adult_dataset.py
-|   |__ CIFAR-100_dataset.py
-│   └── pcam_dataset.py
-│
-├── models/
-│   ├── adult_model.py
-|   |__ CIFAR-100_model.py
-│   └── pcam_model.py
-│
-├── train/
-│   └── trainer.py
-│
-├── eval/
-│   └── evaluator.py
-│
-├── utils/
-│   ├── plot_curves.py
-│   └── timer.py
-│
-├── adult_main.py
-|___ CIFAR-100_main.py
-└── pcam_main.py
 
 ```
 
