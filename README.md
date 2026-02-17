@@ -6,7 +6,7 @@
 ### Assignment Objective
 Compare and evaluate three neural network architectures (MLP, CNN, and Vision Transformer) across three diverse datasets to understand how architectural design choices impact performance based on data modality and structure.
 
-### Setup.md includes how to setup all of the workflow and where the files are located. 
+### NOTE: Setup.md includes how to setup all of the workflow and where the files are located. 
 
 ### Learning Outcomes
 1. **Architecture-Data Alignment**: Understand which architectures are best suited for different data types (tabular, natural images, medical images)
