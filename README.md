@@ -15,7 +15,7 @@ The purpose of this assignment is to compare multiple neural network architectur
 
 This study aims to analyze how architectural design choices influence model performance, training efficiency, and generalization. By examining accuracy, F1-score, and qualitative behavior across tasks, the experiments provide insight into when simpler architectures are sufficient and when specialized structures such as convolution or attention mechanisms become necessary. The results highlight the importance of matching model inductive bias to the underlying data characteristics in order to achieve reliable and efficient learning.Deep learning architectures have different strengths depending on the structure and characteristics of the data they are applied to. Selecting an appropriate model is therefore a critical step in building effective machine learning systems. While modern architectures such as convolutional neural networks (CNNs) and transformer-based models have achieved strong performance across many domains, their effectiveness is largely determined by how well their underlying inductive biases align with the data modality. Understanding these relationships is essential for both practical model selection and for developing intuition about how neural networks learn.
 
-### Learning Outcomes
+## Learning Outcomes
 
 Through this work, several key learning outcomes were achieved. First, the experiments demonstrated the importance of matching the model architecture to the data type. Second, the assignment provided hands-on experience with building training pipelines, evaluating models using appropriate metrics, and maintaining consistent experimental settings for fair comparison. Finally, the project helped develop intuition about trade-offs between model complexity, training time, and generalization performance.
 
@@ -33,8 +33,8 @@ The code was structured in a modular way to make it easier to understand, reuse,
 
 The main experimentation and visualizations were originally implemented in a Jupyter Notebook (ML_HW.ipynb) to support iterative development and analysis. For better organization and clarity, the workflow was later restructured into separate scripts and modules. This design approach follows common deep learning practices and makes the project easier for others to explore, reproduce, and adapt for their own experiments. This is shown in the folders within this page. 
 
-### Datasets and Architectures
-## Three datasets were used to represent different data modalities:
+## Datasets and Architectures
+### Three datasets were used to represent different data modalities:
 
 Adult Income – Tabular data with structured numerical and categorical features
 
