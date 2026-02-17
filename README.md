@@ -6,7 +6,7 @@
 ### Assignment Objective
 Compare and evaluate three neural network architectures (MLP, CNN, and Vision Transformer) across three diverse datasets to understand how architectural design choices impact performance based on data modality and structure.
 
-### NOTE: Setup.md includes how to setup all of the workflow and where the files are located. File ML_HW.ipynb contains all of the outputs, graphs, training time, evaluation outputs, and graphs. The work was originally compiled into the ipynb file, but restructured into seperate files for clarity. 
+### NOTE: Setup.md includes how to setup all of the workflow and where the files are located. File ML_HW.ipynb contains all of the outputs, graphs, training time, evaluation outputs, and graphs. The work was originally compiled into the ipynb file, but now also restructured into seperate files for clarity on this git page. 
 
 ### Learning Outcomes
 1. **Architecture-Data Alignment**: Understand which architectures are best suited for different data types (tabular, natural images, medical images)
