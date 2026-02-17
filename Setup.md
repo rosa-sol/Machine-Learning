@@ -16,7 +16,9 @@ python pcam_main.py --model cnn --epochs 11         # Medical images
 
 ## Datasets
 | **UCI Adult Income** | Binary classification (income >50K) | 48,842 samples | 14 features (6 num, 8 cat) | 2 | Accuracy, F1 |
+
 | **CIFAR-100** | Multi-class object recognition | 60,000 images | 32×32 RGB | 10 | Accuracy |
+
 | **PatchCamelyon** | Tumor detection | 327,000 patches | 96×96 RGB histopathology | 2 | Accuracy, F1, AUC |
 
 ## Architectures
