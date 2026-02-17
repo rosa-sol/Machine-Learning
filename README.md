@@ -8,14 +8,18 @@ Compare and evaluate three neural network architectures (MLP, CNN, and Vision Tr
 
 ### NOTE: Setup.md includes how to setup all of the workflow and where the files are located. File ML_HW.ipynb contains all of the outputs, graphs, training time, evaluation outputs, and graphs. The work was originally compiled into the ipynb file, but now also restructured into seperate files for clarity on this git page. 
 
-### Introduction
+### Introduction and Objectives
 Deep learning architectures have different strengths depending on the structure and characteristics of the data they are applied to. Selecting an appropriate model is therefore a critical step in building effective machine learning systems. While modern architectures such as convolutional neural networks (CNNs) and transformer-based models have achieved strong performance across many domains, their effectiveness is largely determined by how well their underlying inductive biases align with the data modality. Understanding these relationships is essential for both practical model selection and for developing intuition about how neural networks learn.
 
-The purpose of this assignment is to compare multiple neural network architectures across datasets with different data types and levels of spatial structure. Specifically, a Multilayer Perceptron (MLP), a Convolutional Neural Network (CNN), and a Vision Transformer (ViT) were evaluated on tabular data (Adult Income), natural images (CIFAR-10), and medical histopathology images (PatchCamelyon). To ensure a fair comparison, consistent training procedures, data splits, and evaluation metrics were used across experiments.
+The purpose of this assignment is to compare multiple neural network architectures across datasets with different data types and levels of spatial structure. Specifically, a Multilayer Perceptron (MLP), a Convolutional Neural Network (CNN), and a Vision Transformer (ViT) were evaluated on tabular data (Adult Income), natural images (CIFAR-10), and medical histopathology images (PatchCamelyon). To ensure a fair comparison, consistent training procedures, data splits, and evaluation metrics were used across experiments. Rather than focusing only on accuracy, the assignment emphasized understanding why certain architectures work better for certain problems.
 
 This study aims to analyze how architectural design choices influence model performance, training efficiency, and generalization. By examining accuracy, F1-score, and qualitative behavior across tasks, the experiments provide insight into when simpler architectures are sufficient and when specialized structures such as convolution or attention mechanisms become necessary. The results highlight the importance of matching model inductive bias to the underlying data characteristics in order to achieve reliable and efficient learning.Deep learning architectures have different strengths depending on the structure and characteristics of the data they are applied to. Selecting an appropriate model is therefore a critical step in building effective machine learning systems. While modern architectures such as convolutional neural networks (CNNs) and transformer-based models have achieved strong performance across many domains, their effectiveness is largely determined by how well their underlying inductive biases align with the data modality. Understanding these relationships is essential for both practical model selection and for developing intuition about how neural networks learn.
 
 ### Learning Outcomes
+
+Through this work, several key learning outcomes were achieved. First, the experiments demonstrated the importance of matching the model architecture to the data type. Second, the assignment provided hands-on experience with building training pipelines, evaluating models using appropriate metrics, and maintaining consistent experimental settings for fair comparison. Finally, the project helped develop intuition about trade-offs between model complexity, training time, and generalization performance.
+
+General Outcomes: 
 1. **Architecture-Data Alignment**: Understand which architectures are best suited for different data types (tabular, natural images, medical images)
 2. **Inductive Bias**: Learn how built-in assumptions (e.g., CNN's spatial locality, Transformer's attention) affect learning efficiency and generalization
 3. **Practical Implementation**: Gain hands-on experience implementing, training, and evaluating deep learning models using PyTorch
@@ -24,8 +28,29 @@ This study aims to analyze how architectural design choices influence model perf
 
 ## Code Design and Modularity
 
-### Architecture Overview
-The codebase follows a modular design pattern separating concerns for maintainability and reusability:
+### Architecture Overview - Code and Design Modularity
+The code was structured in a modular way to make it easier to understand, reuse, and extend. Each major component of the workflow was separated into logical parts, including data loading, model, a config file, training, and evaluation. This separation allows individual components to be modified or replaced without affecting the entire pipeline.
+
+The main experimentation and visualizations were originally implemented in a Jupyter Notebook (ML_HW.ipynb) to support iterative development and analysis. For better organization and clarity, the workflow was later restructured into separate scripts and modules. This design approach follows common deep learning practices and makes the project easier for others to explore, reproduce, and adapt for their own experiments. This is shown in the folders within this page. 
+
+### Datasets and Architectures
+## Three datasets were used to represent different data modalities:
+
+Adult Income – Tabular data with structured numerical and categorical features
+
+CIFAR-10 – Natural images (32×32 RGB) across 10 object classes
+
+PatchCamelyon (PCam) – Medical histopathology images for tumor detection
+
+To evaluate architectural differences, three model types were tested:
+
+MLP – Fully connected network without spatial assumptions
+
+CNN – Uses convolutional layers to capture spatial patterns and local features
+
+Vision Transformer (ViT) – Uses self-attention to model global relationships across image patches
+
+All models were trained using consistent preprocessing, data splits, and evaluation metrics (Accuracy and F1-score) to ensure fair comparison.
 
 ### Outcomes and Interpretation
 
